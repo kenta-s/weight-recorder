@@ -23,5 +23,4 @@ cabal.project.local
 config.json
 config.json-*
 
-# TODO: remove this line when implementation of generating JWT is done
-jwt
+weight.db
