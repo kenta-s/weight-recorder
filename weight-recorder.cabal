@@ -13,10 +13,14 @@ build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
-executable weight-recorder
-  hs-source-dirs:      app
-  main-is:             Main.hs
+-- executable weight-recorder
+  -- hs-source-dirs:      app
+library
+  hs-source-dirs:      src/
   default-language:    Haskell2010
+  ghc-options:         -Wall
+  exposed-modules:     Entity.User
+                     , Entity.WeightRecord
   build-depends:       base >= 4.7 && < 5
                      , Spock >= 0.11
                      , mtl
@@ -37,5 +41,3 @@ executable weight-recorder
                      , time
                      , transformers
                      , wai
-
-  default-language:   Haskell2010
