@@ -21,3 +21,19 @@ executable weight-recorder
                      , Spock >= 0.11
                      , mtl
                      , text
+                     , bcrypt
+                     , bytestring
+                     , filepath
+                     , HDBC
+                     , HDBC-sqlite3
+                     , http-types
+                     , Spock
+                     , mustache
+                     , persistable-record
+                     , relational-query-HDBC
+                     , relational-query
+                     , resource-pool
+                     , text
+                     , time
+                     , transformers
+                     , wai
