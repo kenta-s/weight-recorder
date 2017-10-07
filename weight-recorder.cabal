@@ -13,6 +13,9 @@ build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
+data-files:          templates/start.mustache
+                   , templates/main.mustache
+                   , data/schema.sql
 -- executable weight-recorder
   -- hs-source-dirs:      app
 library
