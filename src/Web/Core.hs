@@ -8,7 +8,7 @@ module Web.Core
     , WRApp
     , WRAction
     , runSqlite
-    , WRConfig(WRConfig, wrcDBPath, wrcTpRoots, wrcPort)
+    , WRConfig(WRConfig, wrcDBPath, wrcTplRoots, wrcPort)
     )
     where
 

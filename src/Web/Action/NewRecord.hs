@@ -7,7 +7,7 @@ import Control.Monad.IO.Class (liftIO)
 import qualified Data.Time.Clock as TM
 import qualified Data.Time.LocalTime as TM
 import qualified Entity.User as User
-import Model.WeightRecord
+import Model.WeightRecorder
     ( NewWRecord (NewWRecord)
     , insertNewWRecord
     )

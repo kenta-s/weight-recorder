@@ -26,6 +26,12 @@ library
                      , Entity.WeightRecord
                      , Model.User
                      , Model.WeightRecorder
+                     , Web.Action.Register
+                     , Web.Action.Login
+                     , Web.Action.NewRecord
+                     , Web.Core
+                     , Web.View.Main
+                     , Web.View.Start
   build-depends:       base >= 4.7 && < 5
                      , Spock >= 0.11
                      , mtl
