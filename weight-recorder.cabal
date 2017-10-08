@@ -30,6 +30,7 @@ library
                      , Web.Action.Login
                      , Web.Action.NewRecord
                      , Web.Core
+                     , Web.WeightRecorder
                      , Web.View.Main
                      , Web.View.Start
   build-depends:       base >= 4.7 && < 5
