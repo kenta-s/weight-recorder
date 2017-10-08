@@ -1,16 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Web.Spock
-import Web.Spock.Config
-
-import Control.Monad.Trans
-import Data.Monoid
-import Data.IORef
-import qualified Data.Text as T
-
 import Data.Monoid ((<>))
-import Optinos.Applicative
+import Options.Applicative
     ( Parser
     , auto
     , execParser
@@ -35,7 +27,7 @@ buildCfgParser = do
     let db =
             option
                 auto
-                (long "db" <> short 'd' <> metavar "DB" <> help "SQLite DB" <> valude "weight.db")
+                (long "db" <> short 'd' <> metavar "DB" <> help "SQLite DB" <> value "weight.db")
         tplroot =
             option
                 auto
@@ -52,13 +44,13 @@ buildCfgParser = do
     return $ WRConfig <$> db <*> ((: []) <$> tplroot) <*> port
 
 main :: IO ()
-main do
+main = do
     parser <- buildCfgParser
     let opts =
-        info
-            (helper <*> parser)
-            (progDesc "Run Weight Recorder server" <>
-             header
-                 "weight-recorder - A web application to record your weights")
+            info
+                (helper <*> parser)
+                (progDesc "Run Weight Recorder server" <>
+                 header
+                     "weight-recorder - A web application to record your weights")
     cfg <- execParser opts
     runWeightRecorder cfg
